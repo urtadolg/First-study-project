@@ -1,52 +1,21 @@
-let counter = "2";
+const images = [
+  'url(images/background1.jpg)',
+  'url(images/background2.jpg)',
+  'url(images/background3.jpg)',
+  'url(images/background4.jpg)',
+  'url(images/background5.jpg)',
+  'url(images/background6.jpg)',
+]
+
 let delay = 5000;
-setTimeout(() => {
-  document.body.style.backgroundImage = `url(images/background${counter}.jpg)`;
-  counter++;
+const body = document.querySelector('body');
+
+function changeBg (){
+  body.style.backgroundImage = images[0];
+  let img = images.shift();
+  images.push(img);
   setTimeout(() => {
-    document.body.style.backgroundImage = `url(images/background${counter}.jpg)`;
-    counter++;
-    setTimeout(() => {
-      document.body.style.backgroundImage = `url(images/background${counter}.jpg)`;
-      counter++;
-      setTimeout(() => {
-        document.body.style.backgroundImage = `url(images/background${counter}.jpg)`;
-        counter++;
-        setTimeout(() => {
-          document.body.style.backgroundImage = `url(images/background${counter}.jpg)`;
-          counter = 1;
-          setTimeout(() => {
-            document.body.style.backgroundImage = `url(images/background${counter}.jpg)`;
-            counter = 2;
-          }, delay);
-        }, delay);
-      }, delay);
-    }, delay);
+    changeBg();
   }, delay);
-}, delay);
-setInterval(() => {
-  setTimeout(() => {
-    document.body.style.backgroundImage = `url(images/background${counter}.jpg)`;
-    counter++;
-    setTimeout(() => {
-      document.body.style.backgroundImage = `url(images/background${counter}.jpg)`;
-      counter++;
-      setTimeout(() => {
-        document.body.style.backgroundImage = `url(images/background${counter}.jpg)`;
-        counter++;
-        setTimeout(() => {
-          document.body.style.backgroundImage = `url(images/background${counter}.jpg)`;
-          counter++;
-          setTimeout(() => {
-            document.body.style.backgroundImage = `url(images/background${counter}.jpg)`;
-            counter = 1;
-            setTimeout(() => {
-              document.body.style.backgroundImage = `url(images/background${counter}.jpg)`;
-              counter = 2;
-            }, delay);
-          }, delay);
-        }, delay);
-      }, delay);
-    }, delay);
-  }, delay);
-}, delay * 6);
+}
+changeBg();
