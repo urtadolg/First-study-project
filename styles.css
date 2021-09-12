@@ -10,7 +10,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   font-family: Open Sans, sans-serif;
-  transition: background-image ease 1s;
 }
 
 .header {

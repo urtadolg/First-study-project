@@ -11,6 +11,7 @@ let delay = 5000;
 const body = document.querySelector('body');
 
 function changeBg (){
+  body.style.transition = "all 1s ease 1s";
   body.style.backgroundImage = images[0];
   let img = images.shift();
   images.push(img);
