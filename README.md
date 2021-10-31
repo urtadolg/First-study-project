@@ -1,4 +1,4 @@
-# Flickr Homepage rebuilt
+# Flickr Homepage rebuilding
 This is a homepage clone from the famous photography website flickr.com. This project was made for studying and practicing purpose.
 
 Preview: https://urtadolg.github.io/Homepage-Photography-website/
